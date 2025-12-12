@@ -10,7 +10,7 @@ def train_loop(model, train_loader, test_loader, criterion, optimizer, device, e
     for epoch in range(1, epochs+1):
         print(f'\nEpoch {epoch}/{epochs}')
 
-        model.train() ##训练模式
+        model.train()
         train_loss = 0
         train_correct = 0
         total = 0
@@ -60,5 +60,6 @@ def train_loop(model, train_loader, test_loader, criterion, optimizer, device, e
         val_accs.append(val_acc)
 
     return train_losses, train_accs, val_losses, val_accs
+
 
 
